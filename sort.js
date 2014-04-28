@@ -16,24 +16,51 @@ function selectionSort(arr){
    var 
       i = arr.length - 1,
       j,
+      buffer,
       special; //最大或最小值的位置
 
     // 采用倒序，提高查找性能
     for (; i >= 0;  i--) {
       special = i;
+      buffer = arr[i];
 
       for (j = i - 1; j >= 0; j--) {
 
         // 正序与倒序取决于这里的判断,max or min
-        if(arr[special] < arr[j]){
+        if(buffer < arr[j]){
           // 当前的最值位置
           special = j;
+          buffer = arr[j];
         }
       }
-
       // 最值与当前位置的值交换位置
-      arr[special] = [arr[i], arr[i] = arr[special]][0];
+      arr[special] = [ arr[i], arr[i]=buffer ][0];
     }
 
     return arr;
+}
+
+
+/**
+ *冒泡排序  http://en.wikipedia.org/wiki/Bubble_sort
+ *原理：两两比较顺序,如果顺序错误则交换位置
+ *
+ */
+
+function bubbleSort(arr){
+  var 
+      i = arr.length -1,
+      j;
+
+  for (; i >= 0; i--) {
+
+    for (j = i - 1; j >= 0; j--) {
+      if (arr[j] > arr[j+1]) {
+        arr[j] = [ arr[j+1], arr[j+1]=arr[j] ][0];
+      }
+    }
+
+  }
+
+  return arr;
 }
