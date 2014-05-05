@@ -64,3 +64,8 @@ function bubbleSort(arr){
 
   return arr;
 }
+
+/**
+* 插入排序
+*
+*/
