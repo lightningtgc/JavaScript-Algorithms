@@ -6,11 +6,12 @@
 
 
 /**
-* 选择排序  http://zh.wikipedia.org/wiki/选择排序
-* 原理：在未排序的序列中找到最大（小）的元素与第1个元素交换，
-* 在剩余元素中继续找最大（小）的元素与第2个元素交换，
-* 以此类推，直到排序完毕
-*/
+ * @选择排序  http://en.wikipedia.org/wiki/Selection_sort
+ *
+ * 原理：在未排序的序列中找到最大（小）的元素与第1个元素交换，
+ * 在剩余元素中继续找最大（小）的元素与第2个元素交换，
+ * 以此类推，直到排序完毕
+ */
 
 function selectionSort(arr){
    var 
@@ -42,9 +43,9 @@ function selectionSort(arr){
 
 
 /**
- *冒泡排序  http://en.wikipedia.org/wiki/Bubble_sort
- *原理：两两比较顺序,如果顺序错误则交换位置
+ *@冒泡排序  http://en.wikipedia.org/wiki/Bubble_sort
  *
+ *原理：两两比较顺序,如果顺序错误则交换位置
  */
 
 function bubbleSort(arr){
@@ -67,7 +68,7 @@ function bubbleSort(arr){
 
 
 /**
- *插入排序 http://en.wikipedia.org/wiki/Insertion_sort
+ *@插入排序 http://en.wikipedia.org/wiki/Insertion_sort
  *
  *原理：1.从第二位（当前元素）开始从后向前查找
  *      2.若新元素（当前元素的前面）大于当前元素，将新元素移到下一位置
@@ -96,4 +97,14 @@ function insertionSort(arr){
     }
     
     return arr;
+}
+
+/**
+ * @二分插入排序
+ * 用二分法对插入排序进行优化
+ *
+ */
+
+function binaryInsertSort(arr){
+
 }
