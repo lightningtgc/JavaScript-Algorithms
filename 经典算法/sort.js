@@ -108,3 +108,9 @@ function insertionSort(arr){
 function binaryInsertSort(arr){
 
 }
+
+/**
+ * @归并排序
+ * 
+ * /
+
