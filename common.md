@@ -43,3 +43,24 @@ String.prototype.reverse = function() {
 可以使用[ Esrever](https://github.com/mathiasbynens/esrever) 来处理这种特殊字符的反转。
 
 ### 4.反转DOM
+
+
+### 5.移除重复字符
+
+注：需问清楚是否关注字母大小写与空格问题。
+
+```js
+function removeDuplicateChar(str){
+  var strArr = str.split('');
+  var targetArr = [];
+  strArr.forEach(function(item){
+    if (strArr.indexOf(item) === strArr.lastIndexOf(item)) {
+      targetArr.push(item)
+    }
+  })
+  
+  // 去除空格，区分大小写
+  return targetArr.join('').split(' ').join('');
+
+}
+```
