@@ -64,3 +64,28 @@ function removeDuplicateChar(str){
 
 }
 ```
+
+### 6.是否是 回文(palindrome)
+
+回文：从左到右跟从右到左是一样的。
+
+Bulid-in 内置方法
+```js
+function isPalindrom(str) {
+    return str === str.split('').reverse().join('');
+}
+```
+
+原生方法：
+```js
+function isPalindrome(str){
+  var i, len = str.length;
+  // 前一半与后一半进行对比，如果有不同的就不是
+  for(i =0; i<len/2; i++){
+    if (str[i]!== str[len -1 -i])
+       return false;
+  }
+  return true;
+}
+```
+
