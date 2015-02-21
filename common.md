@@ -44,6 +44,25 @@ String.prototype.reverse = function() {
 
 ### 4.反转DOM
 
+上代码：
+
+```js
+function reverseDom(el){
+	var frag = document.createDocumentFragment();
+	while(el.lastChild){
+		frag.appendChild(el.lastChild);
+	}
+	el.appendChild(frag);
+}
+```
+
+注：这里采用的是原生的DOM操作，
+
+采用documentFragment的形式形成一个缓存区，
+
+再采用appendChild，appendChild有个特点：如果被插入的节点已经存在于当前文档的DOM树中,则那个节点会首先从原先的位置移除,然后再插入到新的位置。
+
+利用这个特点可以去除原先位置的节点，再插入新的排序后的节点。
 
 ### 5.移除重复字符
 
