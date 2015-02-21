@@ -69,7 +69,7 @@ function removeDuplicateChar(str){
 
 回文：从左到右跟从右到左是一样的。
 
-Bulid-in 内置方法
+Bulid-in Method 内置方法
 ```js
 function isPalindrom(str) {
     return str === str.split('').reverse().join('');
