@@ -89,3 +89,20 @@ function isPalindrome(str){
 }
 ```
 
+### 7.数-数字
+
+从0 开始到n总共多少个“什么数字”（0，1，2...）
+
+如从0到2015有多少个0：
+
+```js
+function countNumber(n){
+  // 包括0，即单位数都算
+  var count = 1;
+  while(n>0){
+   count += Math.floor(n/10);
+   n = n/10;
+  }
+  return count;
+}
+```
