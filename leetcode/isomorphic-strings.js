@@ -30,7 +30,8 @@ var isIsomorphic = function(s, t) {
     var sMap = {};
     var tMap = {};
    
-   for (; 0 <= i; i--) {
+    for (; 0 <= i; i--) {
+        // 两个Hash表，一一交换对应，判断是否一致。
        var source = sMap[t[i]];
        var target = tMap[s[i]];
         if (!source && !target){
@@ -39,8 +40,7 @@ var isIsomorphic = function(s, t) {
         } else if(source !== s[i] || target !== t[i]) {
             return false;
         }
-          
-   }
+    }
     
     return true;
 };
