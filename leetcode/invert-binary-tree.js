@@ -40,3 +40,26 @@ var invertTree = function(root) {
     }
     return root;
 };
+
+
+// 不递归版本
+var invertTree = function(root) {
+    if (root !== null) {
+        var nodes = [root];
+        while(nodes.length) {
+            //将数组中第一个值抛出来，node做对象引用
+            var node = nodes.shift();
+            if(node === null) continue;
+            
+            //放进数组中继续遍历子节点，全部做左右交换
+            nodes.push(node.left);
+            nodes.push(node.right);
+            
+            //交换左右树
+            node.right = [node.left, node.left = node.right][0];
+    
+        }
+    }
+    
+    return root;
+};
