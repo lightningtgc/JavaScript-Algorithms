@@ -8,4 +8,8 @@ Step:
 if the mid value is greater than the target one ,than set the high value to mid -1;
 if no, set the low value to mid +1;
 
+### 数组去重
+
+> Hash中转
+
 
